@@ -1,0 +1,16 @@
+{
+  "name": "arrows",
+  "version": "0.1.0-beta",
+  "description": "Choose your side",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sledjs/arrows.git"
+  },
+  "author": "Damian Martyniak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sledjs/arrows/issues"
+  },
+  "homepage": "https://github.com/sledjs/arrows#readme"
+}
