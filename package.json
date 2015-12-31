@@ -1,5 +1,5 @@
 {
-  "name": "arrows",
+  "name": "@sled/arrows",
   "version": "0.1.0-beta",
   "description": "Choose your side",
   "main": "index.js",
