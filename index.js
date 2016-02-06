@@ -1,7 +1,8 @@
-export default class ArrowButtons {
+export default class Arrows {
   constructor($core) {
-    if ($core.domModules.arrows) {
-      let $arrows = $core.domModules.arrows.children;
+    this.name = 'arrows';
+    if (this.$) {
+      let $arrows = this.$.children;
       let slides = $core.modules.slides;
 
       [this.$prev, this.$next] = [$arrows[0], $arrows[1]];
