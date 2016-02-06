@@ -12,5 +12,10 @@
   "bugs": {
     "url": "https://github.com/sledjs/arrows/issues"
   },
-  "homepage": "https://github.com/sledjs/arrows#readme"
+  "homepage": "https://github.com/sledjs/arrows#readme",
+
+  "peerDependencies": {
+    "@sled/slides": "0",
+    "@sled/core": "1"
+  }
 }

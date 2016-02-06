@@ -1,7 +1,9 @@
 export default class Arrows {
   constructor($core) {
     this.name = 'arrows';
-    if (this.$) {
+    this.peer = '$';
+
+    if (this.$) { //TODO better core peer
       let $arrows = this.$.children;
       let slides = $core.modules.slides;
 
