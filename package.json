@@ -15,7 +15,7 @@
   "homepage": "https://github.com/sledjs/arrows#readme",
 
   "peerDependencies": {
-    "@sled/slides": "0",
-    "@sled/core": "1"
+    "@sled/slides": "^0.4",
+    "@sled/core": "^1.3"
   }
 }
