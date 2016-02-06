@@ -8,8 +8,8 @@ export default class ArrowButtons {
 
       this.stop = _=> [ this.$prev, this.$next ] = null;
 
-      this.$prev.onclick = _=> slides.change(-1);
-      this.$next.onclick = _=> slides.change(1);
+      this.$next.onclick = slides.next;
+      this.$prev.onclick = slides.prev;
     }
   }
 }
