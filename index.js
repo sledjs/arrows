@@ -1,3 +1,5 @@
+import './index.styl';
+
 export default class Arrows {
   constructor($core) {
     this.name = 'arrows';
