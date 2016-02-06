@@ -1,6 +1,6 @@
 {
   "name": "@sled/arrows",
-  "version": "0.1.0-beta",
+  "version": "1.0.0",
   "description": "Choose your side",
   "main": "index.js",
   "repository": {
