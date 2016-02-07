@@ -1,7 +1,7 @@
 import './index.styl';
 import Arrows from './src/Arrows';
 
-export default {
+module.exports = {
   peer: '$',
   name: 'arrows',
   class: Arrows,
