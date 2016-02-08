@@ -1,6 +1,6 @@
 {
   "name": "@sled/arrows",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Choose your side",
   "main": "index.js",
   "scripts": {
