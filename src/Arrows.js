@@ -1,12 +1,14 @@
+import rx from 'rx';
+
 class Arrows {
   init(core) {
-    let $arrows = this.$.children;
     let slides = core.modules.slides;
+    let arrow$ = rx.Observable
+      .fromEvent(this.$.children, 'click')
+      .pluck('target', 'previousSibling');
 
-    [this.$prev, this.$next] = [$arrows[0], $arrows[1]];
-
-    this.$next.onclick = slides.next;
-    this.$prev.onclick = slides.prev;
+    arrow$.subscribe(forward =>
+      forward ? slides.next() : slides.prev());
   }
 }
 
