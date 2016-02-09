@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "flexstyl": "^1.0.1",
-    "rx": "^4.0.7"
+    "rxjs-es": "^5.0.0-beta.1"
   }
 }
