@@ -21,7 +21,7 @@
     "@sled/core": "^1.3"
   },
   "dependencies": {
-    "flexstyl": "0.0.4",
+    "flexstyl": "^1.0.1",
     "rx": "^4.0.7"
   }
 }
