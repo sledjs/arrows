@@ -4,8 +4,8 @@ Choose your side
 [Sled](https://github.com/sledjs/sled) module
 
 ## cdn
-* [arrows.js](https://npmcdn.com/@sled/arrows/lib/arrows)
-* [arrows.css](https://npmcdn.com/@sled/arrows/lib/arrows.css)
+* [arrows.js](https://unpkg.com/@sled/arrows/lib/arrows)
+* [arrows.css](https://unpkg.com/@sled/arrows/lib/arrows.css)
 
 ## npm
 ```sh
