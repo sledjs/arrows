@@ -1,4 +1,4 @@
-import rx from 'rx';
+import { Observable } from 'rxjs-es/Observable';
 
 class Arrows {
   constructor() {
@@ -21,20 +21,20 @@ class Arrows {
   }
 
   hide$(slides) {
-    return rx.Observable
+    return Observable
       .fromEvent(slides, 'change')
       .filter(n => this.isEnd(n, slides.$$));
   }
 
   show$(slides) {
-    return rx.Observable
+    return Observable
       .fromEvent(slides, 'change')
       .filter(_ => this.hidden !== null)
       .filter(n => !this.isEnd(n, slides.$$));
   }
 
   arrow$(slides) {
-    return rx.Observable
+    return Observable
       .fromEvent(this.$$, 'click')
       .pluck('target', 'previousSibling');
   }

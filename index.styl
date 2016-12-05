@@ -1,4 +1,4 @@
-@import '~flexstyl/index'
+@import '~flexstyl/flex'
 
 .sled
   .arrows
@@ -6,7 +6,9 @@
     width 100%
     height 100%
     position absolute
-    @extend .flex, .between, .acenter
+    flex styl
+    align center
+    justify between
 
     .arrow
       border 0
@@ -15,7 +17,8 @@
       width 2.5em
       height @width
 
-      @extend .flex, .center
+      flex styl
+      flex center
 
       outline none
       cursor pointer
