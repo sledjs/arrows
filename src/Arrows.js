@@ -1,5 +1,3 @@
-import rx from 'rx';
-
 class Arrows {
   constructor() {
     this.hidden = null;
@@ -9,34 +7,33 @@ class Arrows {
     let slides = core.modules.slides;
 
     this.hide(slides.slide);
-    this.hide$(slides)
-      .subscribe(this.hide.bind(this));
-
-    this
-      .show$(slides).subscribe(this.show.bind(this));
-
-    this
-      .arrow$(slides).subscribe(forward =>
-        forward ? slides.next() : slides.prev());
+    this.hide$(slides, this.hide.bind(this));
+    this.show$(slides, this.show.bind(this));
+    this.arrow$(slides, forward =>
+      forward ? slides.next() : slides.prev());
   }
 
-  hide$(slides) {
-    return rx.Observable
-      .fromEvent(slides, 'change')
-      .filter(n => this.isEnd(n, slides.$$));
+  hide$(slides, cb) {
+    slides
+      .addEventListener('change', n =>
+        cb(this.isEnd(n, slides.$$)));
   }
 
-  show$(slides) {
-    return rx.Observable
-      .fromEvent(slides, 'change')
-      .filter(_ => this.hidden !== null)
-      .filter(n => !this.isEnd(n, slides.$$));
+  show$(slides, cb) {
+    slides
+      .addEventListener('change', n => {
+        if (this.hidden === null) return;
+        if (!this.isEnd(n, slides.$$)) return;
+
+        cb(n);
+      });
   }
 
-  arrow$(slides) {
-    return rx.Observable
-      .fromEvent(this.$$, 'click')
-      .pluck('target', 'previousSibling');
+  arrow$(slides, cb) {
+    Array.from(this.$$)
+      .forEach($ =>
+        $.addEventListener('click', e =>
+          cb(e.target.previousSibling)));
   }
 
   isEnd(n, $slides) {
